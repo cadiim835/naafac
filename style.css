@@ -1,0 +1,183 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+body {
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.main-header {
+    background-color: #004aad;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header h1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links li a:hover {
+    color: #ffcc00;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Sections */
+section {
+    margin-bottom: 40px;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #004aad;
+    font-size: 1.8rem;
+    border-bottom: 3px solid #004aad;
+    padding-bottom: 8px;
+}
+
+/* Forms */
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form select,
+form textarea,
+form input[type="file"] {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+}
+
+form textarea {
+    min-height: 80px;
+}
+
+form button {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #003080;
+}
+
+/* Account list on Suuqa */
+.account-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.account-item {
+    flex: 1 1 45%;
+    background-color: #e3f0ff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.account-item h3 {
+    margin-bottom: 10px;
+    color: #002a75;
+}
+
+.account-item p {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.account-item button {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.account-item button:hover {
+    background-color: #e6b800;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #222;
+    color: #ddd;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    nav .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .account-list {
+        flex-direction: column;
+    }
+
+    .account-item {
+        flex: 1 1 100%;
+    }
+}
